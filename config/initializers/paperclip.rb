@@ -6,7 +6,7 @@ Paperclip::Attachment.default_options[:path] = '/:class/:attachment/:id_partitio
 
 AWS.config(
 access_key_id: ENV['S3_ACCESS_KEY_ID'],
-secret_access_key: ENV['SECRET_ACCESS_KEY']
+secret_access_key: ENV['S3_SECRET_ACCESS_KEY']
 )
 
 s3 = AWS::S3.new
