@@ -30,6 +30,10 @@
             <%= f.password_field :password, class: "form-control", placeholder: "Enter password" %>
           </div>
           <div class="form-group">
+            <%= f.label :image_url %>:
+            <%= f.text_field :image_url, class: "form-control", placeholder: "Enter an image url" %>
+          </div>
+          <div class="form-group">
             <%= f.submit "Signup", class: "form-control btn btn-danger"%>
           </div>
       <% end %>

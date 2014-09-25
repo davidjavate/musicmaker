@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
-  before_action :is_authenticated?
 
   def index
+    is_authenticated?
     @users = User.all
     @track = Track.all
      @comment = Comment.new
@@ -33,11 +33,13 @@ class UsersController < ApplicationController
   end
 
   def edit
+    is_authenticated?
     user_id = params[:id]
     @user = User.find_by_id(user_id)
   end
 
   def update
+    is_authenticated?
     if session[:user_id] == nil
       redirect_to root_path
     else
@@ -60,6 +62,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    is_authenticated?
     user_id = params[:id]
     @user = User.find_by_id(user_id)
     @tracks = Track.all
@@ -76,6 +79,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    is_authenticated?
 
     @user = User.find(params[:id])
     @track = @user.tracks.find(params[:id])
