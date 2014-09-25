@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Maker</title>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+  <link href="http://bootswatch.com/superhero/bootstrap.css" rel="stylesheet">
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.0.16.min.js"></script>
+
+  <link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
+
+<style>
+  body {
+    padding-top: 70px;
+
+  }
+  .jumbotron {
+    background-image: url("http://www.armitageinc.com/wp-content/uploads/2013/01/frequency-vibration-Armitageinc.com_.jpg");
+
+  }
+
+  </style>
+</head>
+
+
+
+<body>
+
+<nav class ="navbar navbar-dfault navbar-inverse navbar-fixed-top">
+      <div class = "container">
+          <div class = "navbar-header">
+            <button class ="navbar-toggle" data-toggle="collapse" data-target="navbar-collapse">
+
+            </button>
+          <a href ="/" class ="navbar-brand">Music Maker</a>
+          </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                  <li><a href ="/">Home</a></li>
+                  <li><a href ="/about">About</a></li>
+                  <li><a href ="/tracks/new">New Task</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right"">
+                  <% if @current_user %>
+           <p class="navbar-text"><a href="/users/<%= @current_user.id  %>"><%= @current_user.first_name %></a></p>
+                  <li><a href="/logout">Logout</a></li>
+        <% else %>
+                  <li><a href ="/signup">Sign Up</a></li>
+                  <li><a href ="/login">Login</a></li>
+                  <% end %>
+
+                </ul>
+            </div>
+      </div>
+  </nav>
+
+
+
+  <div class ="container-fluid">
+  <div class ="jumbotron">
+
+    <h1>Music Maker</h1>
+    <p>Making Music One Beat at a Time</p>
+
+  </div>
+
+<!--  -->
+
+<%= yield %>
+
+  </div>
+
+</body>
+
+</html>

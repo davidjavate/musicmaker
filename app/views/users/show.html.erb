@@ -1,0 +1,74 @@
+
+<div class ="row">
+
+	<div class ="col-xs-4 col-xs-offset-1">
+		<h3><%= @user.first_name%> <%= @user.last_name%></h3>
+		<img src="<%= @user.image_url %>"/>
+		<br>
+
+
+
+
+	</div>
+
+	<div class ="col-xs-6">
+
+		<% if session[:user_id] == @user.id %>
+		<a href="/tracks/new" class="btn btn-primary btn-md active" role="button">Create New Task</a>
+		<% end%>
+
+		<br>
+			<% if @user.tracks.count > 0 %>
+
+				<% @user.tracks.each do |track| %>
+					<h2>Task: <%= track.task %></h2>
+
+					<% if track.file_file_name %>
+
+
+					<audio id ="demo" src="<%= track.file.url %>" preload = "auto" controls = "true">
+					</audio>
+
+						<% if session[:user_id] == @user.id %>
+
+						<%= button_to 'delete', track, method: :delete, class: "btn btn-danger", data: {confirm: 'Are you sure?'} %> </p>
+						<% end%>
+
+					<div class="form-group" id="comment-display">
+
+					<% if track.comments.count > 0 %>
+					<h4>Comments:</h4>
+					<% end%>
+
+					<% track.comments.each do |comment| %>
+					<%= comment.description %>
+					<p>
+					<% end %>
+					</div>
+
+
+
+					<%= form_for [track, @comment] do |f| %>
+						<div class="form-group">
+						<%= f.text_area :description, class: "form-control",
+						placeholder: "Comment here" %>
+						</div>
+						<div class = "form-group">
+						<%= f.submit class: "btn" %>
+						</div>
+					<% end %>
+
+
+					<% else %>
+						<a href="/tracks/<%= track.id %>/edit" class="btn btn-primary btn-md active" role="button">Finish Task?</a>
+					<% end %>
+
+
+					</p>
+				<% end %>
+
+			<% end %>
+
+	</div>
+</div>
+<br>

@@ -1,0 +1,17 @@
+<form class="form-group" ng-submit = "create()">
+<label>First Name</label>
+<input type="text" ng-model="user.first_name"/>
+<label>Last Name</label>
+<input type="text" ng-model="user.last_name"/>
+<label>Email</label>
+<input type="email" ng-model="user.email"/>
+
+<div>
+	<label>Password</label>
+	<input type="password" ng-model="user.password"/>
+	<input type="password" ng-model="user.password_confirmation"/>
+</div>
+<button>Sign Up</button>
+</form>
+
+or <a href="/login">Login</a>

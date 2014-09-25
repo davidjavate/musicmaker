@@ -1,0 +1,45 @@
+
+
+<div class = "row">
+<div class="col-md-6 col-md-offset-3">
+
+
+
+  <div class="form-group">
+    <h2>Current Task: <%= @track.task %></h2>
+    <div class="checkbox">
+    <label>
+      <input type="checkbox"> Completed?
+    </label>
+  </div>
+
+  </div>
+
+  <div class = "txtAge" style="display:none">
+  <%= form_for(@track, multipart: true) do |f|%>
+  <div class="form-group">
+    <%= f.label :file %>
+    <%= f.file_field :file %>
+  </div>
+
+<% flash.each do |k, v|%>
+      <p id="<%= k %>"><%= v %></p>
+    <% end %>
+
+
+  <div class="form-group">
+    <%= f.submit 'Upload your track', class: "form-control btn btn-danger" %>
+
+  </div>
+  <% end %>
+  </div>
+
+</div>
+</div>
+
+<script>
+$('.checkbox').click(function () {
+    $(".txtAge").toggle(this.checked);
+});
+
+</script>
