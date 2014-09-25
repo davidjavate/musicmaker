@@ -21,4 +21,3 @@
     } //closing function commentsToPage
 
     commentsToPage();
-  }); //closing on submit
