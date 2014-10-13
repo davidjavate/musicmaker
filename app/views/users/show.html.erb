@@ -5,10 +5,6 @@
 		<h3><%= @user.first_name%> <%= @user.last_name%></h3>
 		<img src="<%= @user.image_url %>"/>
 		<br>
-
-
-
-
 	</div>
 
 	<div class ="col-xs-6">
@@ -31,7 +27,10 @@
 
 						<% if session[:user_id] == @user.id %>
 
-						<%= button_to 'delete', track, method: :delete, class: "btn btn-danger", data: {confirm: 'Are you sure?'} %> </p>
+						 <%= link_to raw("<i class=\"glyphicon glyphicon-trash\"></i>"),
+          					track, data: {confirm: 'Are you sure?'},
+          					class: "btn btn-warning-md",
+         							 method: :delete %>
 						<% end%>
 
 					<div class="form-group" id="comment-display">
@@ -41,7 +40,7 @@
 					<% end%>
 
 					<% track.comments.each do |comment| %>
-					<%= comment.description %>
+					<%= @current_user.first_name%> <%= @current_user.last_name %>: <%= comment.description %>
 					<p>
 					<% end %>
 					</div>

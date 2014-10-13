@@ -1,7 +1,13 @@
 #Music Maker
 
 ###Description: 
-This site was made for a final project for General Assembly's Web Development Immersive during the week of 8/18/14-9/24/14 by David Javate.  The purpose of the site is to create a habit maker for electronic music producers to get into the habit of making music.  Users choose a music creation related task then upload the result when they are finished. The User can then receive comment feedback from other users on their work.
+This site was made for a final project for General Assembly's Web Development Immersive during the week of 8/18/14-9/24/14 by David Javate.  Taking inspiration from Soundcloud and Stack Overflow, the purpose of the site is to create a habit maker for electronic music producers to get into the habit of making music.  Users choose a music creation related task then upload the result when they are finished. The User can then receive comment feedback from other users on their work.
+
+####Heroku Link:
+[Heroku](http://salty-taiga-9321.herokuapp.com/)	
+Login: 	
+email: guest@guest.com	
+password: 123
 
 
 ####Web Technologies:
@@ -13,13 +19,22 @@ Rspec
 Postgres	
 
 
-####Wireframe:
+####Screenshots:	
 
-![Smaller Icon](http://i151.photobucket.com/albums/s142/davidjavate/81c92cbd-07a6-4d48-8420-86a42dbdfade_zps412f21fb.jpg "Wireframe")	
-####Entity Relationship Diagram:
+Home page:		
+ Visitors can see what current artists are working on.
 
-![Smaller Icon](http://i151.photobucket.com/albums/s142/davidjavate/4d9cdfe1-27fa-4a67-aa6a-342872ee7172_zps7c755610.jpg)
+![Smaller Icon](http://i151.photobucket.com/albums/s142/davidjavate/a8b5de56-bd65-481d-b2e5-f596be70bdb8_zps8540bf79.png)	
 
+Individual artist page:		
+On the individual page, visitors can see the artist's task history and make comments.
+
+![Smaller Icon](http://i151.photobucket.com/albums/s142/davidjavate/9b9973ce-65f1-45a2-9906-8afbf5e5a135_zpsdc9e19e2.png)
+
+Completed task page:		
+After creating a new task, users complete their task by uploading audio.
+
+![Smaller Icon](http://i151.photobucket.com/albums/s142/davidjavate/1e4c62f5-fa92-4aad-9541-10b06e099ffa_zps9a7962f9.png)
 
 ####Wishlist:
 Waveform visualization w/ waveform.JS	

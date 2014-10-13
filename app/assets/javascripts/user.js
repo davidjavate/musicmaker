@@ -1,3 +1,9 @@
+
+
+var description = $("#description-val").val();
+var formURL = $(this).attr('action');
+
+
 // appending comment to page
     function commentsToPage() {
       $.ajax({
