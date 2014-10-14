@@ -36,23 +36,7 @@ Completed task page:
 After creating a new task, users complete their task by uploading audio.
 
 ![Smaller Icon](http://i151.photobucket.com/albums/s142/davidjavate/1e4c62f5-fa92-4aad-9541-10b06e099ffa_zps9a7962f9.png)
-=======
 
-Home page:
- Visitors can see what current artists are working on.
-
-![Smaller Icon](http://i151.photobucket.com/albums/s142/davidjavate/a8b5de56-bd65-481d-b2e5-f596be70bdb8_zps8540bf79.png)
-
-Individual artist page:
-On the individual page, visitors can see the artist's task history and make comments.
-
-
-![Smaller Icon](http://i151.photobucket.com/albums/s142/davidjavate/9b9973ce-65f1-45a2-9906-8afbf5e5a135_zpsdc9e19e2.png)
-
-Completed task page:
-After creating a new task, users complete their task by uploading audio.
-
-![Smaller Icon](http://i151.photobucket.com/albums/s142/davidjavate/1e4c62f5-fa92-4aad-9541-10b06e099ffa_zps9a7962f9.png)
 
 ####Wishlist:
 Waveform visualization w/ waveform.JS
